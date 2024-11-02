@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOPISHETTI SHIVARAM - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        header img {
+            width: 150px; /* Adjust size as needed */
+            border-radius: 50%; /* Circular image */
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .project {
+            width: 300px; /* Set fixed width for project boxes */
+            margin: 15px;
+            text-align: center; /* Center-align project text */
+        }
+
+        .project-img {
+            width: 100%; /* Set width to 100% of the parent container */
+            height: 150px; /* Fixed height */
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        .project-description {
+            display: none; /* Hide description by default */
+        }
+
+        .show-more {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleDescription(projectId) {
+            const description = document.getElementById(projectId);
+            const button = document.getElementById(`show-more-button-${projectId}`);
+
+            if (description.style.display === 'none') {
+                description.style.display = 'block';
+                button.innerText = 'Show Less';
+            } else {
+                description.style.display = 'none';
+                button.innerText = 'Show More';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="C:\Users\shiva\StudioProjects\har\assets\shivaram.jpg" alt="GOPISHETTI SHIVARAM" class="profile-img">
+        <h1>GOPISHETTI SHIVARAM</h1>
+        <p>Web Developer | BACKEND DEVELOPER</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate web developer with a background in computer science, interested in crafting user-friendly applications and constantly exploring new technologies to enhance my skills and creativity.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project">
+                <a href="https://link-to-your-project1.com" target="_blank">
+                    <img src="C:\Users\shiva\Downloads\download.png" alt="Project 1" class="project-img">
+                </a>
+                <p>STUDENT DETAILS MANAGEMENT SYSTEM</p>
+                <p class="project-description" id="student-description">
+                    The Student Details Management System is a web application designed to efficiently manage student information, including personal details, academic records, and attendance.
+                </p>
+                <span class="show-more" id="show-more-button-student-description" onclick="toggleDescription('student-description')">Show More</span>
+            </div>
+            <div class="project">
+                <a href="https://link-to-your-project2.com" target="_blank">
+                    <img src="C:\Users\shiva\Downloads\bill.png" alt="Project 2" class="project-img">
+                </a>
+                <p>BILL MANAGEMENT SYSTEM</p>
+                <p class="project-description" id="bill-description">
+                    The Bill Management System is a web application that allows users to create, track, and manage their bills securely, featuring user authentication and reminders.
+                </p>
+                <span class="show-more" id="show-more-button-bill-description" onclick="toggleDescription('bill-description')">Show More</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, feel free to reach out through any of the following:</p>
+        <p>Email: <a href="mailto:avularamakrishna@gmail.com">gopishettishivaram@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/gopishettishivaram" target="_blank">gopishettishivaram</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 GOPISHETTI SHIVARAM. All rights reserved.</p>
+    </footer>
+</body>
+</html>
